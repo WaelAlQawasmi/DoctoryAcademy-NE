@@ -13,7 +13,7 @@
 
 
     ?>
-    <title>Doctory Academy</title>
+    <title>Doctory Academy-New Edition</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="ass/back-login.jpeg">
 
