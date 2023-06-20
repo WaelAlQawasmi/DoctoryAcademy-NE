@@ -16,6 +16,7 @@
     <body>
         <div class="login-clean">
             <form method="post" method="POST" action="{{ route('login') }}">
+                @csrf
                 <h2 class="sr-only">{{ __('Login') }}</h2>
                 <div class="illustration"><img src="https://doctoryacademy.com/vido.php?vId=0000&url=1663439152.jpg"
                         class="icon ion-ios-navigate"></i></div>
