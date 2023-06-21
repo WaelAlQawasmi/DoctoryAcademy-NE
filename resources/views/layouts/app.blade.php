@@ -139,7 +139,7 @@
 
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
-                            <li><a class="active" href="index.html">Home</a></li>
+                            <li><a class="active" href="{{ url('/') }}">Home</a></li>
 
 
 
@@ -200,12 +200,11 @@
                                     <li><a href="#">Drop Down 4</a></li>
                                 </ul>
                             </li> --}}
-                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
 
-                    <a href="courses.html" class="get-started-btn">Get Started</a>
+                    <a href="#" class="get-started-btn">Get Started</a>
 
                 </div>
             </header><!-- End Header -->

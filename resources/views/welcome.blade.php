@@ -21,19 +21,24 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>عن المنصة</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
+              منصة موجهة لطلبة الطب البشري و الأسنان في مختلف الجامعات الأردنيه
+               ، تُعنى بتقديم المحاضرات المحوسبة في مختلف مساقات الطب في مرحلتيه البيسك و السريريَّة ،
+               و تُتيح لمشتركيها </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i> متابعة المواد بطرق عملية و مُيسَّرة</li>
+              <li><i class="bi bi-check-circle"></i> اشراف نُخبة من 
+                اساتِذتنا و أطبائنا ذوي الخبرة الوفيرة في 
+                التدريس </li>
+              <li><i class="bi bi-check-circle"></i> توفير كامل وسائل التواصل مع 
+                كادرنا المميز </li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            </p>
+              كما و تبقى الإداره على
+              اطلاع كامل بكافه تفاصيل سير العملية
+              التعليمية لجميع الدورات على المنصة .
+                       </p>
 
           </div>
         </div>
