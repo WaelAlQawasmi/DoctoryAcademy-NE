@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\MediaCenter;
+
 return new class extends Migration
 {
     /**
@@ -11,12 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('administrations', function (Blueprint $table) {
+        Schema::create('media_centers', function (Blueprint $table) {
             $table->id();
+            $table->string('fileName',50);
+            $table->string('category',5);
+            $table->string('fileType',15);
+            $table->string('fileExt',5);
+            $table->text('fileHash');
+            $table->string('fileStatus',5);
+
             $table->timestamps();
-            $table->string('name');
-            $table->mediumText('description')->nullable($value = true);
-            $table->foreignIdFor(MediaCenter::class);
         });
     }
 
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('administrations');
+        Schema::dropIfExists('media_centers');
     }
 };
