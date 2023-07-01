@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\sections;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,8 +12,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('teachers_detailes', function (Blueprint $table) {
+        Schema::create('section_comuncations', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(sections::class);
+            $table->text("video");
+            $table->text("chat");
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('teachers_detailes');
+        Schema::dropIfExists('section_comuncations');
     }
 };
