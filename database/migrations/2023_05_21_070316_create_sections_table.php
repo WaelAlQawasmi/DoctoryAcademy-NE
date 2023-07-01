@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\MediaCenter;
+use App\Models\departments;
 use App\Models\User;
 
 return new class extends Migration
@@ -13,15 +14,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('sections', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class);
-            $table->string("phonenumber");
-            $table->string("paymentType");
-
-            $table->mediumText('description')->nullable($value = true);
-            $table->foreignIdFor(MediaCenter::class);
             $table->timestamps();
+            $table->string('name');
+            $table->mediumText('description')->nullable($value = true);
+            $table->foreignIdFor(MediaCenter::class);    
+            $table->foreignIdFor(departments::class);    
+            $table->foreignIdFor(User::class);    
+                    
         });
     }
 
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('sections');
     }
 };
