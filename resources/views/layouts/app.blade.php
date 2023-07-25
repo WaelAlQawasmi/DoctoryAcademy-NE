@@ -90,7 +90,7 @@
                             <a href="{{route('users.index') }}">{{ __('users') }}</a>
                         </li>
                         <li >
-                            <a href="{{route('translations') }}">{{ __('roles') }}</a>
+                            <a href="/translations">{{ __('roles') }}</a>
                         </li>
                             <li >
                                 <a  href="#" role="button"
