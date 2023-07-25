@@ -81,6 +81,17 @@
                                 </li>
                             @endif
                         @else
+
+                        <li >
+                            <a href="{{route('roles.index') }}">{{ __('roles') }}</a>
+                        </li>
+
+                        <li >
+                            <a href="{{route('users.index') }}">{{ __('users') }}</a>
+                        </li>
+                        <li >
+                            <a href="{{route('translations') }}">{{ __('roles') }}</a>
+                        </li>
                             <li >
                                 <a  href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
