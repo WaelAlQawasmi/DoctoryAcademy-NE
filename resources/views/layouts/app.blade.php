@@ -90,7 +90,7 @@
                             <a href="{{route('users.index') }}">{{ __('users') }}</a>
                         </li>
                         <li >
-                            <a href="/translations">{{ __('roles') }}</a>
+                            <a href="/translations">{{ __('translations') }}</a>
                         </li>
                             <li >
                                 <a  href="#" role="button"
@@ -112,8 +112,23 @@
                             </li>
                         @endguest
 
-
-                           
+                        <li >
+                            <a  href="#" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ LaravelLocalization::getCurrentLocaleNative() }}
+                             </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                             
+                                    <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}
+                                    </a>
+                             
+                            @endforeach
+                                
+                            </div>
+                        </li>
+                    
 
                             {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i
                                         class="bi bi-chevron-down"></i></a>
