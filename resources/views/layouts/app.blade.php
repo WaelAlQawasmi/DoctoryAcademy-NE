@@ -62,7 +62,7 @@
 
                     <nav id="navbar" class="navbar order-last order-lg-0">
                         <ul>
-                            <li><a class="active" href="{{ url('/') }}">Home</a></li>
+                            <li><a class="active" href="{{ url('/') }}"> {{ __('mainTrans.Home') }}</a></li>
 
 
 
@@ -71,26 +71,26 @@
                             @guest
                             @if (Route::has('login'))
                                 <li >
-                                    <a  href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a  href="{{ route('login') }}"> {{ __('mainTrans.Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li >
-                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a href="{{ route('register') }}">{{ __('mainTrans.Register') }}</a>
                                 </li>
                             @endif
                         @else
 
                         <li >
-                            <a href="{{route('roles.index') }}">{{ __('roles') }}</a>
+                            <a href="{{route('roles.index') }}">{{ __('mainTrans.roles') }}</a>
                         </li>
 
                         <li >
-                            <a href="{{route('users.index') }}">{{ __('users') }}</a>
+                            <a href="{{route('users.index') }}">{{ __('mainTrans.users') }}</a>
                         </li>
                         <li >
-                            <a href="/translations">{{ __('translations') }}</a>
+                            <a href="/translations">{{ __('mainTrans.translations') }}</a>
                         </li>
                             <li >
                                 <a  href="#" role="button"
@@ -102,7 +102,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('mainTrans.Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -153,7 +153,7 @@
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
 
-                    <a href="#" class="get-started-btn">Get Started</a>
+                    <a href="#" class="get-started-btn"> {{ __('mainTrans.Get Started') }}</a>
 
                 </div>
             </header><!-- End Header -->
