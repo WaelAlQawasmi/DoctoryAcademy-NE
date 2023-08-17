@@ -21,11 +21,10 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>عن المنصة</h3>
+            <h3>   {{ __('mainTrans.titleHowWeare') }}</h3>
             <p class="fst-italic">
-              منصة موجهة لطلبة الطب البشري و الأسنان في مختلف الجامعات الأردنيه
-               ، تُعنى بتقديم المحاضرات المحوسبة في مختلف مساقات الطب في مرحلتيه البيسك و السريريَّة ،
-               و تُتيح لمشتركيها </p>
+              {{ __('mainTrans.discriptionHowWeare') }}
+              </p>
             <ul>
               <li><i class="bi bi-check-circle"></i> متابعة المواد بطرق عملية و مُيسَّرة</li>
               <li><i class="bi bi-check-circle"></i> اشراف نُخبة من 
