@@ -43,4 +43,11 @@ in addition to promote medical education, disseminate information, and exchange 
   'vision2' => 'We believe in the importance of interaction&participation, therefore, we provide an environment that encourages students to ask questions, engage in discussions, and learn collaboratively. Additionally, we aim to provide regular assessments to measure students\' progress and identify areas where they need improvement.',
   'vision3' => '"In short, the vision of \'Doctory Academy\' is to provide comprehensive and effective medical education that contributes to achieving student excellence and prepares them for a medical career with a high level of understanding and knowledge."',
   'Medu' => 'promote medical education and disseminate information.',
+  'Logout' => 'Logout',
+  'footerServices1' => 'Medical Courses',
+  'footerServices2' => 'free/paid courses',
+  'footerServices3' => 'live & pre-recorded  lectures',
+  'footerNewsletter' => 'subscribe to keep informed about all the new features, courses, events, or Important announcements that make the learning experience better.',
+  'footerServices4' => 'clear and simplified explanations',
+  'successLogin' => 'You are logged in',
 );
