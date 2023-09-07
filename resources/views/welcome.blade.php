@@ -329,7 +329,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __('mainTrans.Home') }}</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about">{{ __('mainTrans.titleHowWeare') }}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">{{ __('mainTrans.Pfeatures') }}</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
@@ -339,19 +339,18 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>{{ __('mainTrans.services') }}</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices1') }}</li>
+              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices2') }}</li>
+              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices3') }}</li>
+              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices4') }}</li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>{{ __('mainTrans.footerNewsletter') }}</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email" placeholder="email:"><input type="submit" value="Subscribe">
             </form>
           </div>
 
