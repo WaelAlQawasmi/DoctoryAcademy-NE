@@ -49,5 +49,8 @@ in addition to promote medical education, disseminate information, and exchange 
   'footerServices3' => 'live & pre-recorded  lectures',
   'footerNewsletter' => 'subscribe to keep informed about all the new features, courses, events, or Important announcements that make the learning experience better.',
   'footerServices4' => 'clear and simplified explanations',
-  'successLogin' => 'You are logged in',
+  'Name' => 'Name',
+  'Email' => 'Email',
+  'Password' => 'Password',
+  'Confirm_Password' => 'Confirm Password',
 );
