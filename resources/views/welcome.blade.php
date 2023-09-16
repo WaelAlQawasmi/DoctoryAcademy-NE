@@ -1,401 +1,988 @@
 @extends('layouts.app')
 
 @section('content')
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>  {{ __('mainTrans.bannerHead') }}</h1>
-      <h2> {{ __('mainTrans.bannerDiscription') }}</h2>
-      <a href="courses.html" class="btn-get-started">{{ __('mainTrans.Get Started') }}</a>
+ 
+
+
+<!--=================================
+=            Page Slider            =
+==================================-->
+<div class="hero-slider">
+  <!-- Slider Item -->
+  <div class="slider-item slide1" style="background-image:url({{ asset('assets/images/slider/slider-bg-3.jpg')}})">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start -->
+          <div class="content style text-center">
+            <h2 class="text-white text-bold mb-2" data-animation-in="slideInLeft">{{ __('mainTrans.footerServices1') }}</h2>
+            <p class="tag-text mb-4" data-animation-in="slideInRight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sunt animi sequi ratione quod at earum. <br> Quis quos officiis numquam!</p>
+            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInLeft" data-duration-in="1.2">explore</a>
+          </div>
+          <!-- Slide Content End -->
+        </div>
+      </div>
     </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+  </div>
+  <!-- Slider Item -->
+  <div class="slider-item" style="background-image:url({{ asset('assets/images/slider/slider-bg-2.jpg')}});">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start-->
+          <div class="content style text-center">
+            <h2 class="text-white" data-animation-in="slideInRight">{{ __('mainTrans.footerServices2') }}</h2>
+            <p class="tag-text mb-4" data-animation-in="slideInRight" data-duration-in="0.6">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInRight" data-duration-in="1.2">about us</a>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>   {{ __('mainTrans.titleHowWeare') }}</h3>
-            <p class="fst-italic">
-              {{ __('mainTrans.discriptionHowWeare') }}
-              </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> {{ __('mainTrans.tracking') }}</li>
-              <li><i class="bi bi-check-circle"></i>{{ __('mainTrans.SupervisedBY') }}</li>
-              <li><i class="bi bi-check-circle"></i>{{ __('mainTrans.communication') }} </li>
+          <!-- Slide Content End-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Slider Item -->
+  <div class="slider-item" style="background-image:url({{ asset('assets/images/slider/slider-bg-3.jpg')}})">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start -->
+          <div class="content text-center style">
+            <h2 class="text-white text-bold mb-2" data-animation-in="slideInRight">{{ __('mainTrans.footerServices3') }}</h2>
+            <p class="tag-text mb-4" data-animation-in="slideInLeft">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deserunt, <br>eius pariatur minus itaque nostrum.</p>
+            <a href="about.html" class="btn btn-main btn-white" data-animation-in="slideInRight"  data-duration-in="1.2">shop now</a>
+          </div>
+          <!-- Slide Content End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--====  End of Page Slider  ====-->
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-block row no-gutters">
+      <div class="col-lg-4 col-md-6 emmergency item">
+        <i class="fa fa-phone"></i>
+        <h2>Emegency Cases</h2>
+        <a href="tel:1-800-700-6200">1-800-700-6200</a>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 top-doctor item">
+        <i class="fa fa-stethoscope"></i>
+        <h2>24 Hour Service</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dignissimos officia dicta suscipit
+          vel eum</p>
+        <a href="service.html" class="btn btn-main">Read more</a>
+      </div>
+      <div class="col-lg-4 col-md-12 working-time item">
+        <i class="fa fa-hourglass-o"></i>
+        <h2>Working Hours</h2>
+        <ul class="w-hours">
+          <li>Mon - Fri - <span>8:00 - 17:00</span></li>
+          <li>Mon - Fri - <span>8:00 - 17:00</span></li>
+          <li>Mon - Fri - <span>8:00 - 17:00</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--about section-->
+<section class="feature-section section bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="image-content">
+					<div class="section-title text-center">
+						<h3>Best Features <span>of Our Hospital</span></h3>
+						<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br> nam error officia vero tempora alias? Sunt?</p>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html"><img loading="lazy" src="{{ asset('assets/images/resource/1.png')}}" alt="features image"></a>
+									</figure>
+								</div>
+								<h3 class="mb-2">Orthopedics</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="{{ asset('assets/images/resource/2.png')}}" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2">Diaginostic</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="{{ asset('assets/images/resource/3.png')}}" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2">Psycology</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="{{ asset('assets/images/resource/4.png')}}" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2">General Treatment</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--End about section-->
+
+<!--Start about us area-->
+<section class="service-tab-section section">
+  <div class="outer-box clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Nav tabs -->
+          <div class="tabs mb-5">
+            <ul class="nav nav-tabs justify-content-center" id="aboutTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="dormitory-tab" data-toggle="tab" href="#dormitory" role="tab" aria-controls="dormitory" aria-selected="true">dormitory</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="orthopedic-tab" data-toggle="tab" href="#orthopedic" role="tab" aria-controls="orthopedic" aria-selected="false">orthopedic</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="sonogram-tab" data-toggle="tab" href="#sonogram" role="tab" aria-controls="sonogram" aria-selected="false">sonogram</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="x-ray-tab" data-toggle="tab" href="#x-ray" role="tab" aria-controls="x-ray" aria-selected="false">x-ray</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="diagnostic-tab" data-toggle="tab" href="#diagnostic" role="tab" aria-controls="diagnostic" aria-selected="false">diagnostic</a>
+              </li>
             </ul>
-            <p>{{ __('mainTrans.aboutSummary') }}</p>
-
           </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
-      <div class="container">
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>{{ __('mainTrans.students') }}</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
-            <p>{{ __('mainTrans.courses') }}</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-            <p>{{ __('mainTrans.events') }}</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>{{ __('mainTrans.trainers') }}</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-              <h3>{{ __('mainTrans.vision') }}</h3>
-              <p>
-              {{ __('mainTrans.descriptionVision') }}
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
+          <!--Start single tab content-->
+          <div class="tab-content" id="aboutTab">
+            <div class="service-box tab-pane fade show active" id="dormitory">
               <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-receipt"></i>
-                    <p>{{ __('mainTrans.vision1') }}</p>
-                  </div>
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid" src="{{ asset('assets/images/services/service-one.jpg')}}" alt="service-image">
                 </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-cube-alt"></i>                
-                    <p>{{ __('mainTrans.vision2') }}</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-images"></i>                   
-                    <p>{{ __('mainTrans.vision3') }}</p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-          <h2>{{ __('mainTrans.features') }}</h2>
-          <p>{{ __('mainTrans.Pfeatures') }}</p>
-        </div>
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a href="">{{ __('mainTrans.speed') }}</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="">{{ __('mainTrans.Medu') }}</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a href="">{{ __('mainTrans.explanations') }}</a></h3>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="">{{ __('mainTrans.files') }}</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a href="">{{ __('mainTrans.protected') }}</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-base-station-line" style="color: #ff5828;"></i>
-              <h3><a href="">{{ __('mainTrans.live') }}</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="">{{ __('mainTrans.Ssections') }}</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-              <h3><a href="">{{ __('mainTrans.cost') }}</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-              <h3><a href="">{{ __('mainTrans.account') }}</a></h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Popular Courses Section ======= -->
-    <section id="popular-courses" class="courses">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>{{ __('mainTrans.courses') }}</h2>
-          <p>{{ __('mainTrans.popularCourses') }}</p>
-        </div>
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="course-item">
-              <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Web Development</h4>
-                  <p class="price">$169</p>
-                </div>
-
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                    <span>Antonio</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;50
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;65
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>dormitory</h3>
+                    </div>
+                    <div class="text">
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added. then a
+                        dental prosthetic is added.then a dental pros- thetic is added.</p>
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added. then a dental
+                        prosthetic is added.then a dental pros- thetic is added.</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>
+                    <a href="services.html" class="btn btn-style-one">Read more</a>
                   </div>
                 </div>
               </div>
             </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="assets/img/course-2.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Marketing</h4>
-                  <p class="price">$250</p>
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="orthopedic">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid"  src="{{ asset('assets/images/services/service-two.jpg')}}" alt="service-image">
                 </div>
-
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
-                    <span>Lana</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="course-item">
-              <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Content</h4>
-                  <p class="price">$180</p>
-                </div>
-
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
-                    <span>Brandon</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;20
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;85
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>orthopedic</h3>
+                    </div>
+                    <div class="text">
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>
+                    <a href="services.html" class="btn btn-style-one">Read more</a>
                   </div>
                 </div>
               </div>
             </div>
-          </div> <!-- End Course Item-->
-
-        </div>
-
-      </div>
-    </section><!-- End Popular Courses Section -->
-
-    <!-- ======= Trainers Section ======= -->
-    <section id="trainers" class="trainers">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/universities/h.jpg" class="img-fluid" alt="">
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="sonogram">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid" src="{{ asset('images/services/service-three.jpg')}}" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>sonogram</h3>
+                    </div>
+                    <div class="text">
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>
+                    <a href="services.html" class="btn btn-style-one">Read more</a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/universities/techno.png" class="img-fluid" alt="">
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="x-ray">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid"  src="{{ asset('assets/asset/images/testimonials/4.png')}}" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>x-ray</h3>
+                    </div>
+                    <div class="text">
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>
+                    <a href="services.html" class="btn btn-style-one">Read more</a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/universities/jo.jpg" class="img-fluid" alt="">
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="diagnostic">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid"  src="{{ asset('assets/images/testimonials/4.png')}}" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>diagnostic</h3>
+                    </div>
+                    <div class="text">
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>
+                    <a href="services.html" class="btn btn-style-one">Read more</a>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!--End single tab content-->
           </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Trainers Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Doctory Academy</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>{{ __('mainTrans.links') }}</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __('mainTrans.Home') }}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">{{ __('mainTrans.titleHowWeare') }}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#features">{{ __('mainTrans.Pfeatures') }}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>{{ __('mainTrans.services') }}</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices1') }}</li>
-              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices2') }}</li>
-              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices3') }}</li>
-              <li><i class="bx bx-chevron-right"></i>{{ __('mainTrans.footerServices4') }}</li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>{{ __('mainTrans.footerNewsletter') }}</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="email:"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
         </div>
       </div>
     </div>
+  </div>
+</section>
+<!--End about us area-->
 
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-          &copy; Copyright <strong><span>{{ config('app.name', 'Laravel') }}</span></strong>. All Rights Reserved
+<!--Service Section-->
+<section class="service-section bg-gray section">
+  <div class="container">
+    <div class="section-title text-center">
+      <h3>Provided
+        <span>Services</span>
+      </h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. qui suscipit atque <br>
+        fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="items-container">
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="{{ asset('assets/asset/images/testimonials/4.png')}}" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Better Service At Low Cost</span>
+                <a href="service.html">
+                  <h6>Dormitory</h6>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="{{ asset('assets/asset/images/testimonials/4.png')}}" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Better Service At Low Cost</span>
+                <a href="service.html">
+                  <h6>Germs Protection</h6>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src=" {{ asset('assets/asset/images/testimonials/4.png')}}" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Better Service At Low Cost</span>
+                <a href="service.html">
+                  <h6>Psycology</h6>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy"src="{{ asset('assets/images/gallery/1.jpg')}}" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Better Service At Low Cost</span>
+                <a href="service.html">
+                  <h6>Dormitory</h6>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="{{ asset('assets/images/gallery/2.jpg')}}" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Better Service At Low Cost</span>
+                <a href="service.html">
+                  <h6>Germs Protection</h6>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="{{ asset('assets/images/gallery/3.jpg')}}" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Better Service At Low Cost</span>
+                <a href="service.html">
+                  <h6>Psycology</h6>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-        
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </div>
+</section>
+<!--End Service Section-->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!--team section-->
+<section class="team-section section">
+  <div class="container">
+    <div class="section-title text-center">
+      <h3>Our Expert
+        <span>Doctors</span>
+      </h3>
+      <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem illo, rerum
+        <br>natus nobis deleniti doloremque minima odit voluptatibus ipsam animi?</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="{{ asset('assets/images/team/doctor-2.jpg')}}" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Dr. Robert Barrethion</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
+            <a href="appointment.html" class="btn btn-main">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="{{ asset('assets/images/team/doctor-lab-3.jpg')}}" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Dr. Marry Lou</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
+            <a href="appointment.html" class="btn btn-main">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="{{ asset('assets/images/team/event-2.jpg')}}" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Dr. Sansa Stark</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.</p>
+            <a href="appointment.html" class="btn btn-main">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End team section-->
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+<!--testimonial-section-->
+<section class="testimonial-section" style="background: url({{ asset('assets/images/testimonials/1.jpg')}});">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h3>What Our
+            <span>Patients Says</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="testimonial-carousel">
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy"  src="{{ asset('assets/asset/images/testimonials/1.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>Adam Rose</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy"  src="{{ asset('assets/asset/images/testimonials/2.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>David Warner</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy"  src="{{ asset('assets/asset/images/testimonials/3.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>Amy Adams</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy"  src="{{ asset('assets/asset/images/testimonials/1.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>Adam Rose</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy"  src="{{ asset('assets/asset/images/testimonials/2.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>David Warner</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy"  src="{{ asset('assets/asset/images/testimonials/3.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>Amy Adams</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="{{ asset('assets/images/testimonials/1.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>Adam Rose</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="{{ asset('assets/images/testimonials/2.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>David Warner</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="{{ asset('assets/asset/images/testimonials/3.png')}}" alt="">
+                </figure>
+              </div>
+              <h6>Amy Adams</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End testimonial-section-->
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Contact Section -->
+<section class="appoinment-section section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="accordion-section">
+  <div class="section-title">
+    <h3>FAQ</h3>
+  </div>
+  <div class="accordion-holder">
+    <div class="accordion" id="accordionGroup" role="tablist" aria-multiselectable="true">
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h4 class="card-title">
+            <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Why Should I choose Medical Health
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionGroup">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute,
+            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+            tempor,
+            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+            helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+            haven't
+            heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h4 class="card-title">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              What are the Centre’s visiting hours?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordionGroup">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute,
+            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+            tempor,
+            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+            helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+            haven't
+            heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingThree">
+          <h4 class="card-title">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              How many visitors are allowed?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordionGroup">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute,
+            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+            tempor,
+            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+            helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+            haven't
+            heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-area pl-0 pl-lg-5">
+  <div class="section-title">
+    <h3>Request
+      <span>Appointment</span>
+    </h3>
+  </div>
+  <form name="contact_form" class="default-form contact-form" action="!#" method="post">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control" type="text" name="Name" placeholder="Name" required="">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="email" name="Email" placeholder="Email" required="">
+        </div>
+        <div class="form-group">
+          <select class="form-control" name="subject">
+            <option>Departments</option>
+            <option>Diagnostic</option>
+            <option>Psychological</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control" type="text" name="Phone" placeholder="Phone" required="">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="Date" placeholder="Date" required="" id="datepicker" autocomplete="off">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+        </div>
+        <div class="form-group">
+          <select class="form-control" name="subject">
+            <option>Doctor</option>
+            <option>Diagnostic</option>
+            <option>Psychological</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <textarea class="form-control" name="form_message" placeholder="Your Message" required=""></textarea>
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="btn-style-one">submit now</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+      </div>
+    </div>                    
+  </div>
+</section>
+<!-- End Contact Section -->
 
+<!--footer-main-->
+<footer class="footer-main">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="about-widget">
+            <div class="footer-logo">
+              <figure>
+                <a href="index.html">
+                  <img loading="lazy" class="img-fluid" src="{{ asset('assets/images/logo-2.png')}}" alt="medic">
+                </a>
+              </figure>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, temporibus?</p>
+            <ul class="location-link">
+              <li class="item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Modamba, NY 80021, United States</p>
+              </li>
+              <li class="item">
+                <i class="far fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:support@medic.com">
+                  <p>support@medic.com</p>
+                </a>
+              </li>
+              <li class="item">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <p>(88017) +123 4567</p>
+              </li>
+            </ul>
+            <ul class="list-inline social-icons">
+              <li class="list-inline-item"><a href="https://facebook.com/themefisher" aria-label="facebook"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="https://twitter.com/themefisher" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="https://instagram.com/themefisher" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://github.com/themefisher" aria-label="github"><i class="fab fa-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-5 mb-3 mb-md-0">
+          <h2>Services</h2>
+          <ul class="menu-link">
+            <li>
+              <a href="service.html">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Orthopadic Liabilities</a>
+            </li>
+            <li>
+              <a href="service.html">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Dental Clinic</a>
+            </li>
+            <li>
+              <a href="service.html">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Dormamu Clinic</a>
+            </li>
+            <li>
+              <a href="service.html">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Psycological Clinic</a>
+            </li>
+            <li>
+              <a href="service.html">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>Gynaecological Clinic</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-7">
+          <div class="social-links">
+            <h2>Recent Posts</h2>
+            <ul>
+              <li class="item">
+                <div class="media">
+                  <div class="media-left mr-3">
+                    <a href="blog-details.html">
+                      <img loading="lazy" src={{ asset('assets/images/slider/slider-bg-3.jpg')}} alt="post-thumb">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h5><a href="blog-details.html">A lesson adip isicing</a></h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="media">
+                  <div class="media-left mr-3">
+                    <a href="blog-details.html">
+                      <img loading="lazy" src={{ asset('assets/images/slider/slider-bg-3.jpg')}} alt="post-thumb">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h5><a href="blog-details.html">How to make an event</a></h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dolorem.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container clearfix">
+      <div class="copyright-text">
+        <p>&copy; Copyright 2021. Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a></p>
+      </div>
+      <ul class="footer-bottom-link">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!--End footer-main-->
+
+<!-- scroll-to-top -->
+<div id="back-to-top" class="back-to-top">
+  <i class="fa fa-angle-up"></i>
+</div>
+
+</div>
+<!--End pagewrapper-->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".header-top">
+  <span class="icon fa fa-angle-up"></span>
+</div>
+
+
+<!-- jquery -->
+<script src="{{ asset('assets/plugins/jquery.min.js')}}"></script>
+<!-- bootstrap -->
+<script src="{{ asset('assets/plugins/bootstrap/bootstrap.min.js')}}"></script>
+<!-- Slick Slider -->
+<script src="{{ asset('assets/plugins/slick/slick.min.js')}}"></script>
+<script src="{{ asset('assets/plugins/slick/slick-animation.min.js')}}"></script>
+<!-- FancyBox -->
+<script src="{{ asset('assets/plugins/fancybox/jquery.fancybox.min.js')}}" defer></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+<script src="{{ asset('assets/plugins/google-map/gmap.js')}}" defer></script>
+
+<!-- jquery-ui -->
+<script src="{{ asset('assets/plugins/jquery-ui/jquery-ui.js')}}" defer></script>
+<!-- timePicker -->
+<script src="{{ asset('assets/plugins/timePicker/timePicker.js')}}" defer></script>
+
+<!-- script js -->
+<script src="{{ asset('assets/js/script.js')}}"></script>
 </body>
 
 </html>
+
+
 
 @endsection

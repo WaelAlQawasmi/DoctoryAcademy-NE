@@ -1,162 +1,235 @@
 
-        <!doctype html>
-        <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+       
+          <!doctype html>
+          <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+            <head>
+            
+              <!-- ** Basic Page Needs ** -->
+              <meta charset="utf-8">
+              <title>{{ config('app.name', 'Laravel') }}</title>
+              <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-
-            <!-- CSRF Token -->
-            <meta name="csrf-token" content="{{ csrf_token() }}">
-
-            <title>{{ config('app.name', 'Laravel') }}</title>
-
-            <meta charset="utf-8">
-            <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-            <meta content="" name="description">
-            <meta content="" name="keywords">
-
-            <!-- Favicons -->
-            <link href="{{ asset('assets/img/favicon.png" rel="icon')}}">
-            <link href="{{ asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
-
-                <!-- Scripts -->
-    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
-            <!-- Google Fonts -->
-            <link
-                href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-                rel="stylesheet">
-
-            <!-- Vendor CSS Files -->
-            <link href="{{ asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
-            <link href="{{ asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
-            <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-            <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-            <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-            <link href="{{ asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
-            <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-
-            <!-- Template Main CSS File -->
-            <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
-
-            <!-- =======================================================
-          * Template Name: Mentor
-          * Updated: May 30 2023 with Bootstrap v5.3.0
-          * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-          * Author: BootstrapMade.com
-          * License: https://bootstrapmade.com/license/
-          ======================================================== -->
-        </head>
-
-        <body>
-
-            <!-- ======= Header ======= -->
-            <header id="header" class="fixed-top">
-                <div class="container d-flex align-items-center">
-
-                    <h1 class="logo me-auto"><a href="{{ url('/') }}">
-                        {{ config('app.name', 'Black-ch') }}</a></h1>
-                    <!-- Uncomment below if you prefer to use an image logo -->
-                    <!-- <a href="index.html" class="logo me-auto"><img src="{{ asset('assets/img/logo.png')}}" alt="" class="img-fluid"></a>-->
-
-                    <nav id="navbar" class="navbar order-last order-lg-0">
-                        <ul>
-                            <li><a class="active" href="{{ url('/') }}"> {{ __('mainTrans.Home') }}</a></li>
-
-
-
-
-
-                            @guest
-                            @if (Route::has('login'))
-                                <li >
-                                    <a  href="{{ route('login') }}"> {{ __('mainTrans.Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li >
-                                    <a href="{{ route('register') }}">{{ __('mainTrans.Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-
-                        <li >
-                            <a href="{{route('roles.index') }}">{{ __('mainTrans.roles') }}</a>
+            
+              <!-- ** Mobile Specific Metas ** -->
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="description" content="Medical HTML Template">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+              <meta name="author" content="Themefisher">
+              <meta name="generator" content="Themefisher Medical HTML Template v1.0">
+              
+              <!-- theme meta -->
+              <meta name="theme-name" content="medic" />
+              
+              <!-- ** Plugins Needed for the Project ** -->
+              <!-- bootstrap -->
+              <link rel="stylesheet" href="{{ asset('assets/plugins/bootstrap/bootstrap.min.css')}}">
+              <!-- Slick Carousel -->
+              <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick.css')}}">
+              <link rel="stylesheet" href="{{ asset('assets/plugins/slick/slick-theme.css')}}">
+              <!-- FancyBox -->
+              <link rel="stylesheet" href="{{ asset('assets/plugins/fancybox/jquery.fancybox.min.css')}}">
+              <!-- fontawesome -->
+              <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome/css/all.min.css')}}">
+              <!-- animate.css -->
+              <link rel="stylesheet" href="{{ asset('assets/plugins/animation/animate.min.css')}}">
+              <!-- jquery-ui -->
+              <link rel="stylesheet" href="{{ asset('assets/plugins/jquery-ui/jquery-ui.css')}}">
+              <!-- timePicker -->
+              <link rel="stylesheet" href="{{ asset('assets/plugins/timePicker/timePicker.css')}}">
+              
+              <!-- Stylesheets -->
+              <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+              
+              <!--Favicon-->
+              <link rel="icon" href="{{ asset('assets/images/favicon.png')}}" type="image/x-icon">
+            
+            </head>
+            
+            
+            <body>
+              <div class="page-wrapper">
+            
+              
+            
+            <!--header top-->
+            <div class="header-top">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <div class="top-left text-center text-md-left">
+                      <h6>Opening Hours : Saturday to Tuesday - 8am to 10pm</h6>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="top-right text-center text-md-right">
+                      <ul class="social-links">
+                        <li>
+                          <a href="https://themefisher.com/" aria-label="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
                         </li>
-
-                        <li >
-                            <a href="{{route('users.index') }}">{{ __('mainTrans.users') }}</a>
+                        <li>
+                          <a href="https://themefisher.com/" aria-label="twitter">
+                            <i class="fab fa-twitter"></i>
+                          </a>
                         </li>
-                        <li >
-                            <a href="/translations">{{ __('mainTrans.translations') }}</a>
+                        <li>
+                          <a href="https://themefisher.com/" aria-label="google-plus">
+                            <i class="fab fa-google-plus-g"></i>
+                          </a>
                         </li>
-                            <li >
-                                <a  href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('mainTrans.Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-
-                        <li >
-                            <a  href="#" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ LaravelLocalization::getCurrentLocaleNative() }}
-                             </a>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                             
-                                    <a class="dropdown-item" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                        {{ $properties['native'] }}
-                                    </a>
-                             
-                            @endforeach
-                                
-                            </div>
+                        <li>
+                          <a href="https://themefisher.com/" aria-label="instagram">
+                            <i class="fab fa-instagram"></i>
+                          </a>
                         </li>
-                    
-
-                            {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i
-                                        class="bi bi-chevron-down"></i></a>
-                                <ul>
-                                    <li><a href="#">Drop Down 1</a></li>
-                                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                                class="bi bi-chevron-right"></i></a>
-                                        <ul>
-                                            <li><a href="#">Deep Drop Down 1</a></li>
-                                            <li><a href="#">Deep Drop Down 2</a></li>
-                                            <li><a href="#">Deep Drop Down 3</a></li>
-                                            <li><a href="#">Deep Drop Down 4</a></li>
-                                            <li><a href="#">Deep Drop Down 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Drop Down 2</a></li>
-                                    <li><a href="#">Drop Down 3</a></li>
-                                    <li><a href="#">Drop Down 4</a></li>
-                                </ul>
-                            </li> --}}
-                        </ul>
-                        <i class="bi bi-list mobile-nav-toggle"></i>
-                    </nav><!-- .navbar -->
-
-                    <a href="#" class="get-started-btn"> {{ __('mainTrans.Get Started') }}</a>
-
+                        <li>
+                          <a href="https://themefisher.com/" aria-label="pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-            </header><!-- End Header -->
+              </div>
+            </div>
+            <!--header top-->
+            
+            <!--Header Upper-->
+            <section class="header-uper">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-xl-4 col-lg-3">
+                    <div class="logo">
+                      <a href="index.html">
+                        <img loading="lazy" class="img-fluid" src="images/logo.png" alt="logo">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xl-8 col-lg-9">
+                    <div class="right-side">
+                      <ul class="contact-info pl-0 mb-4 mb-md-0">
+                        <li class="item text-left">
+                          <div class="icon-box">
+                            <i class="far fa-envelope"></i>
+                          </div>
+                          <strong>Email</strong>
+                          <br>
+                          <a href="mailto:info@medic.com">
+                            <span>info@medic.com</span>
+                          </a>
+                        </li>
+                        <li class="item text-left">
+                          <div class="icon-box">
+                            <i class="fas fa-phone"></i>
+                          </div>
+                          <strong>Call Now</strong>
+                          <br>
+                          <span>+ (88017) - 123 - 4567</span>
+                        </li>
+                      </ul>
+                      <div class="link-btn text-center text-lg-right">
+                        <a href="contact.html" class="btn-style-one">Appoinment</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!--Header Upper-->
+            
+            
+            <!--Main Header-->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarLinks">
+                  <ul class="navbar-nav">
+                    
+                    @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item active">
+                          <a class="nav-link" href="{{ route('index') }}">Home</a>
+                        </li>
+                        <li class="nav-item @@about">
+                          <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item @@service">
+                          <a class="nav-link" href="service.html">Service</a>
+                        </li>
+                        <li class="nav-item @@gallery">
+                          <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item @@team">
+                          <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item @@appointment">
+                          <a class="nav-link" href="appointment.html">Appointment</a>
+                        </li>
+                        <li class="nav-item dropdown @@blogs">
+                          <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
+                
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item @@blogDetails" href="blog-details.html">Blog Details</a></li>
+                            <li class="dropdown dropdown-submenu dropright">
+                              <a class="dropdown-item dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+                    
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
+                                <li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="nav-item @@contact">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item @@contact">
+                          <a class="nav-link"  href="{{ route('login') }}"> {{ __('mainTrans.Login') }}</a>
+                        </li>
+                    @endif
+                    @if (Route::has('register'))
+                      <li class="nav-item @@contact">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('mainTrans.Register') }}</a>
+                      </li>
+                    @endif
+                    @else
+                    @can('edit translation')
+                      <li class="nav-item @@contact">
+                        <a class="nav-link" href="/translations">{{ __('mainTrans.translations') }}</a>
+                      </li>
+                    @endcan
+                    @can('edit permission')
+                      <li class="nav-item @@contact">
+                        <a class="nav-link" href="{{route('users.index') }}">{{ __('mainTrans.users') }}</a>
+                      </li>
+                      <li class="nav-item @@contact">
+                        <a class="nav-link" href="{{route('roles.index') }}">{{ __('mainTrans.roles') }}</a>
+                      </li>
+                    @endcan
+                      <li class="nav-item @@contact">
+                        <a  class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        {{ __('mainTrans.Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                      </li>
+                    @endguest
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <!--End Main Header -->
+
 
             <main class="py-4">
                 @yield('content')

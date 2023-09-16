@@ -29,7 +29,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Auth::routes();
 	Route::get('/', function () {
         return view('welcome');
-    });
+    })->name('index');
 
 });
 Route::get('/translations')->middleware('auth');
