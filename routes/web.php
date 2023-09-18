@@ -31,5 +31,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
         return view('welcome');
     });
 
+    
+    Route::get('/create-users-with-role/{roleName}',[UserController::class,'CreatUserWithRole'])->middleware('role:Super Admin|Admin')->name('users.CreatUserWithRole');
+    Route::post('/stor-users-with-role',[UserController::class,'StorUserWithRole'])->middleware('role:Super Admin|Admin')->name('users.StorUserWithRole');
+
 });
 Route::get('/translations')->middleware('auth');
